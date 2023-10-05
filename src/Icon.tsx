@@ -5,7 +5,7 @@ import { images } from './SvgPath';
 
 const Icon: FC<IconProps> = ({ icon, color, size = 'medium' }) => {
   const SvgIcon = images[icon];
-  const iconClass = `${styles.icon} ${styles[`icon--${size}`]}`.trim();
+  const iconClass = `${styles.icon} ${styles[`icon--${size}`]} ${color ? styles[`icon--accent`] : ''}`.trim();
 
   return <SvgIcon data-accent-color={color} className={iconClass} />;
 };
