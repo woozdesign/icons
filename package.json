@@ -1,14 +1,14 @@
 {
-  "name": "woozdesign-icons",
+  "name": "@woozdesign/icons",
   "version": "0.1.0",
-  "description": "WoozDesign -Icons",
+  "description": "WoozDesign - Icons",
   "main": "dist/index.js",
   "contributors": [
     "Leo Kim <kim.kw8012@gmail.com>"
   ],
   "keywords": [
     "woozdesign",
-    "colors"
+    "icons"
   ],
   "files": [
     "dist"
