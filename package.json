@@ -2,13 +2,16 @@
   "name": "woozdesign-icons",
   "version": "0.1.0",
   "description": "WoozDesign -Icons",
-  "main": "index.js",
+  "main": "dist/index.js",
   "contributors": [
     "Leo Kim <kim.kw8012@gmail.com>"
   ],
   "keywords": [
     "woozdesign",
     "colors"
+  ],
+  "files": [
+    "dist"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
