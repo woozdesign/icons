@@ -1,0 +1,34 @@
+# Node modules and logs
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build output
+build/
+# dist/
+
+# TypeScript
+*.tsbuildinfo
+tsc-debug.log
+
+# Storybook build
+storybook-static/
+
+# IDE - Visual Studio Code
+.vscode/
+
+# macOS system files
+.DS_Store
+
+# Temporary files
+*.tmp
+*.swp
+*.bak
+
+# Cache (babel, eslint, etc.)
+.cache/
+.eslintcache
+
+ 
+# End of .gitignore

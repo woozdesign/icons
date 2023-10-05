@@ -1,0 +1,58 @@
+{
+  "name": "woozdesign-icons",
+  "version": "0.1.0",
+  "description": "WoozDesign -Icons",
+  "main": "index.js",
+  "contributors": [
+    "Leo Kim <kim.kw8012@gmail.com>"
+  ],
+  "keywords": [
+    "woozdesign",
+    "colors"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:webpack": "webpack --config webpack.config.ts --mode production  && tsc-alias",
+    "build": "npm run generateSvgPath && npm run build:webpack",
+    "generateSvgPath": "node ./scripts/generateSvgPath.ts"
+  },
+  "dependencies": {
+    "@types/react": "^18.2.25",
+    "@woozdesign/colors": "^1.0.31",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.67.0"
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^8.0.1",
+    "@types/node": "^20.6.3",
+    "@types/node-sass": "^4.11.4",
+    "@typescript-eslint/eslint-plugin": "^6.7.0",
+    "@typescript-eslint/parser": "^6.7.0",
+    "css-loader": "^6.8.1",
+    "eslint": "^8.49.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "mini-css-extract-plugin": "^2.7.6",
+    "prettier": "^3.0.3",
+    "sass-loader": "^13.3.2",
+    "ts-loader": "^9.4.4",
+    "ts-node": "^10.9.1",
+    "tsc-alias": "^1.8.8",
+    "typescript": "^5.2.2",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/woozlabs/woozdesign-icons.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "Leo Kim <kim.kw8012@gmail.com> (http://woozlabs.com/)",
+  "license": "MIT"
+}
