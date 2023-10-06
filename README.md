@@ -1,6 +1,7 @@
 ![header](https://capsule-render.vercel.app/api?type=rect&color=000&fontColor=fff&height=148&section=header&text=Wooz%20Design%20Icons&fontSize=52)
 
-A 24x24 icons designed by the [WoozDesign](https://woozlabs.com) team. Extended design of [Feather Icons](https://feathericons.com/).
+A 24x24 icons designed by the [WoozDesign](https://woozlabs.com) team.
+Extended design of [Feather Icons](https://feathericons.com/).
 
 ---
 
@@ -17,6 +18,7 @@ npm install @woozdesign/icons
 Import the icons into your React project:
 
 ```js
+import '@woozdesign/icons'; // Import CSS
 import { Icon } from '@woozdesign/icons';
 
 function MyComponent() {

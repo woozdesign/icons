@@ -1,3 +1,4 @@
+import React from 'react';
 import { IconType } from './SvgPath';
 
 export type ThemeAccentColor =
@@ -35,7 +36,8 @@ export type ThemeAccentColor =
 
 export interface IconProps {
   type: IconType;
-  size?: 'small' | 'medium' | 'large' | 'xlarge';
+  size?: 'small' | 'medium' | 'large' | 'xlarge' | 'dynamic';
   className?: string;
+  style?: React.CSSProperties;
   color?: ThemeAccentColor;
 }
