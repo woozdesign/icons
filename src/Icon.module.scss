@@ -1,8 +1,14 @@
 .icon {
-  width: 18px;
-  height: 18px;
+  width: 100%;
+  height: 100%;
   color: var(--color-gray-12);
 
+  &--accent {
+    color: var(--color-accent-9);
+  }
+}
+
+.wrapper {
   &--small {
     width: 14px;
     height: 14px;
@@ -20,9 +26,5 @@
   &--xlarge {
     width: 32px;
     height: 32px;
-  }
-
-  &--accent {
-    color: var(--color-accent-9);
   }
 }

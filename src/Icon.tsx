@@ -4,9 +4,14 @@ import { IconProps } from './Icon.prop';
 import { images } from './SvgPath';
 const Icon: FC<IconProps> = ({ icon, color, size = 'medium' }) => {
   const SvgIcon = images[icon];
-  const iconClass = `${styles.icon} ${styles[`icon--${size}`]} ${color ? styles[`icon--accent`] : ''}`.trim();
+  const wrapperClass = `${styles[`wrapper--${size}`]} `;
+  const iconClass = `${styles.icon} ${color ? styles[`icon--accent`] : ''}`.trim();
 
-  return <SvgIcon data-accent-color={color} className={iconClass} />;
+  return (
+    <div className={styles.wrapper}>
+      <SvgIcon data-accent-color={color} className={iconClass} />
+    </div>
+  );
 };
 
 export default Icon;
