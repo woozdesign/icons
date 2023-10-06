@@ -18,23 +18,21 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
-        use: ['ts-loader'],
-        exclude: [/node_modules/],
-      },
-      {
         test: /\.svg$/i,
         issuer: /\.[jt]sx?$/,
         use: [
           {
             loader: '@svgr/webpack',
             options: {
-              svgo: {
-                plugins: [{ removeViewBox: false }],
-              },
+              svgo: false,
             },
           },
         ],
+      },
+      {
+        test: /\.tsx?$/,
+        use: ['ts-loader'],
+        exclude: [/node_modules/],
       },
       {
         test: /\.scss$/,
