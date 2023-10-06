@@ -34,7 +34,7 @@ export type ThemeAccentColor =
   | 'sky';
 
 export interface IconProps {
-  icon: IconType;
+  type: IconType;
   size?: 'small' | 'medium' | 'large' | 'xlarge';
   className?: string;
   color?: ThemeAccentColor;

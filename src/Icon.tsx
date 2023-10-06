@@ -2,15 +2,15 @@ import React, { FC } from 'react';
 import styles from './Icon.module.scss';
 import { IconProps } from './Icon.prop';
 import { images } from './SvgPath';
-const Icon: FC<IconProps> = ({ icon, color, size = 'medium' }) => {
-  const SvgIcon = images[icon];
+const Icon: FC<IconProps> = ({ type, color, size = 'medium' }) => {
+  const SvgIcon = images[type];
   const wrapperClass = `${styles[`wrapper--${size}`]} `;
   const iconClass = `${styles.icon} ${color ? styles[`icon--accent`] : ''}`.trim();
 
   return (
-    <div className={styles.wrapper}>
+    <span className={wrapperClass}>
       <SvgIcon data-accent-color={color} className={iconClass} />
-    </div>
+    </span>
   );
 };
 
