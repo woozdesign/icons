@@ -1,8 +1,5 @@
 .icon {
-  width: 18px;
-  height: 18px;
-  color: white;
-  fill: white;
+  color: var(--color-gray-12);
 
   &--small {
     width: 14px;
@@ -23,15 +20,28 @@
     height: 32px;
   }
 
-  // You can add more styles or variations here
+  &--accent {
+    color: var(--color-accent-9);
+  }
+}
 
-  &.primary {
-    fill: var(--color-accent-9);
-    fill: var(--color-accent-9);
+.wrapper {
+  &--small {
+    width: 14px;
+    height: 14px;
+  }
+  &--medium {
+    width: 18px;
+    height: 18px;
   }
 
-  &.default {
-    fill: var(--color-gray-12);
-    fill: var(--color-gray-12);
+  &--large {
+    width: 24px;
+    height: 24px;
+  }
+
+  &--xlarge {
+    width: 32px;
+    height: 32px;
   }
 }

@@ -18,14 +18,21 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.svg$/i,
+        issuer: /\.[jt]sx?$/,
+        use: [
+          {
+            loader: '@svgr/webpack',
+            options: {
+              svgo: false,
+            },
+          },
+        ],
+      },
+      {
         test: /\.tsx?$/,
         use: ['ts-loader'],
         exclude: [/node_modules/],
-      },
-      {
-        test: /\.svg$/i,
-        issuer: /\.[jt]sx?$/,
-        use: ['@svgr/webpack'],
       },
       {
         test: /\.scss$/,

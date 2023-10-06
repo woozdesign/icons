@@ -2,12 +2,16 @@ import React, { FC } from 'react';
 import styles from './Icon.module.scss';
 import { IconProps } from './Icon.prop';
 import { images } from './SvgPath';
+const Icon: FC<IconProps> = ({ type, color, size = 'medium' }) => {
+  const SvgIcon = images[type];
+  // const wrapperClass = `${styles[`wrapper--${size}`]} `;
+  const iconClass = `${styles.icon} ${styles[`icon--${size}`]} ${color ? styles[`icon--accent`] : ''}`.trim();
 
-const Icon: FC<IconProps> = ({ icon, color, size = 'medium' }) => {
-  const SvgIcon = images[icon];
-  const iconClass = `${styles.icon} ${styles[`icon--${size}`]}`.trim();
-
-  return <SvgIcon data-accent-color={color} className={iconClass} />;
+  return (
+    // <span className={wrapperClass}>
+    <SvgIcon data-accent-color={color} className={iconClass} />
+    // </span>
+  );
 };
 
 export default Icon;
