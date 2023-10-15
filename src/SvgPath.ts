@@ -1,5 +1,6 @@
 import { FunctionComponent, SVGProps } from 'react';
 
+
 import Activity from './svg/Activity.svg';
 import Airplay from './svg/Airplay.svg';
 import AlertCircle from './svg/AlertCircle.svg';
@@ -123,9 +124,11 @@ import GitCommit from './svg/GitCommit.svg';
 import GitMerge from './svg/GitMerge.svg';
 import GitPullRequest from './svg/GitPullRequest.svg';
 import Github from './svg/Github.svg';
+import Github2 from './svg/Github2.svg';
 import Gitlab from './svg/Gitlab.svg';
 import Globe from './svg/Globe.svg';
 import Grid from './svg/Grid.svg';
+import Hamburger from './svg/Hamburger.svg';
 import HardDrive from './svg/HardDrive.svg';
 import Hash from './svg/Hash.svg';
 import Headphones from './svg/Headphones.svg';
@@ -145,6 +148,7 @@ import LifeBuoy from './svg/LifeBuoy.svg';
 import Link from './svg/Link.svg';
 import Link2 from './svg/Link2.svg';
 import Linkedin from './svg/Linkedin.svg';
+import Linkedin2 from './svg/Linkedin2.svg';
 import List from './svg/List.svg';
 import Loader from './svg/Loader.svg';
 import Lock from './svg/Lock.svg';
@@ -240,6 +244,7 @@ import Tag from './svg/Tag.svg';
 import Target from './svg/Target.svg';
 import Terminal from './svg/Terminal.svg';
 import Thermometer from './svg/Thermometer.svg';
+import Threads from './svg/Threads.svg';
 import ThumbsDown from './svg/ThumbsDown.svg';
 import ThumbsUp from './svg/ThumbsUp.svg';
 import ToggleLeft from './svg/ToggleLeft.svg';
@@ -255,6 +260,8 @@ import Truck from './svg/Truck.svg';
 import Tv from './svg/Tv.svg';
 import Twitch from './svg/Twitch.svg';
 import Twitter from './svg/Twitter.svg';
+import Twitter2 from './svg/Twitter2.svg';
+import TwitterX from './svg/TwitterX.svg';
 import Type from './svg/Type.svg';
 import Umbrella from './svg/Umbrella.svg';
 import Underline from './svg/Underline.svg';
@@ -278,6 +285,7 @@ import Watch from './svg/Watch.svg';
 import Wifi from './svg/Wifi.svg';
 import WifiOff from './svg/WifiOff.svg';
 import Wind from './svg/Wind.svg';
+import Wooz from './svg/Wooz.svg';
 import X from './svg/X.svg';
 import XCircle from './svg/XCircle.svg';
 import XOctagon from './svg/XOctagon.svg';
@@ -288,585 +296,311 @@ import ZapOff from './svg/ZapOff.svg';
 import ZoomIn from './svg/ZoomIn.svg';
 import ZoomOut from './svg/ZoomOut.svg';
 
-export type IconType =
-  | 'Activity'
-  | 'Airplay'
-  | 'AlertCircle'
-  | 'AlertOctagon'
-  | 'AlertTriangle'
-  | 'AlignCenter'
-  | 'AlignJustify'
-  | 'AlignLeft'
-  | 'AlignRight'
-  | 'Anchor'
-  | 'Aperture'
-  | 'Archive'
-  | 'ArrowDown'
-  | 'ArrowDownCircle'
-  | 'ArrowDownLeft'
-  | 'ArrowDownRight'
-  | 'ArrowLeft'
-  | 'ArrowLeftCircle'
-  | 'ArrowRight'
-  | 'ArrowRightCircle'
-  | 'ArrowUp'
-  | 'ArrowUpCircle'
-  | 'ArrowUpLeft'
-  | 'ArrowUpRight'
-  | 'AtSign'
-  | 'Award'
-  | 'BarChart'
-  | 'BarChart2'
-  | 'Battery'
-  | 'BatteryCharging'
-  | 'Bell'
-  | 'BellOff'
-  | 'Bluetooth'
-  | 'Bold'
-  | 'Book'
-  | 'BookOpen'
-  | 'Bookmark'
-  | 'Box'
-  | 'Briefcase'
-  | 'Calendar'
-  | 'Camera'
-  | 'CameraOff'
-  | 'Cast'
-  | 'Check'
-  | 'CheckCircle'
-  | 'CheckSquare'
-  | 'ChevronDown'
-  | 'ChevronLeft'
-  | 'ChevronRight'
-  | 'ChevronUp'
-  | 'ChevronsDown'
-  | 'ChevronsLeft'
-  | 'ChevronsRight'
-  | 'ChevronsUp'
-  | 'Chrome'
-  | 'Circle'
-  | 'Clipboard'
-  | 'Clock'
-  | 'Cloud'
-  | 'CloudDrizzle'
-  | 'CloudLightning'
-  | 'CloudOff'
-  | 'CloudRain'
-  | 'CloudSnow'
-  | 'Code'
-  | 'Codepen'
-  | 'Codesandbox'
-  | 'Coffee'
-  | 'Columns'
-  | 'Command'
-  | 'Compass'
-  | 'Copy'
-  | 'CornerDownLeft'
-  | 'CornerDownRight'
-  | 'CornerLeftDown'
-  | 'CornerLeftUp'
-  | 'CornerRightDown'
-  | 'CornerRightUp'
-  | 'CornerUpLeft'
-  | 'CornerUpRight'
-  | 'Cpu'
-  | 'CreditCard'
-  | 'Crop'
-  | 'Crosshair'
-  | 'Database'
-  | 'Delete'
-  | 'Disc'
-  | 'Divide'
-  | 'DivideCircle'
-  | 'DivideSquare'
-  | 'DollarSign'
-  | 'Download'
-  | 'DownloadCloud'
-  | 'Dribbble'
-  | 'Droplet'
-  | 'Edit'
-  | 'Edit2'
-  | 'Edit3'
-  | 'ExternalLink'
-  | 'Eye'
-  | 'EyeOff'
-  | 'Facebook'
-  | 'FastForward'
-  | 'Feather'
-  | 'Figma'
-  | 'File'
-  | 'FileMinus'
-  | 'FilePlus'
-  | 'FileText'
-  | 'Film'
-  | 'Filter'
-  | 'Flag'
-  | 'Folder'
-  | 'FolderMinus'
-  | 'FolderPlus'
-  | 'Framer'
-  | 'Frown'
-  | 'Gift'
-  | 'GitBranch'
-  | 'GitCommit'
-  | 'GitMerge'
-  | 'GitPullRequest'
-  | 'Github'
-  | 'Gitlab'
-  | 'Globe'
-  | 'Grid'
-  | 'HardDrive'
-  | 'Hash'
-  | 'Headphones'
-  | 'Heart'
-  | 'HelpCircle'
-  | 'Hexagon'
-  | 'Home'
-  | 'Image'
-  | 'Inbox'
-  | 'Info'
-  | 'Instagram'
-  | 'Italic'
-  | 'Key'
-  | 'Layers'
-  | 'Layout'
-  | 'LifeBuoy'
-  | 'Link'
-  | 'Link2'
-  | 'Linkedin'
-  | 'List'
-  | 'Loader'
-  | 'Lock'
-  | 'LogIn'
-  | 'LogOut'
-  | 'Mail'
-  | 'Map'
-  | 'MapPin'
-  | 'Maximize'
-  | 'Maximize2'
-  | 'Meh'
-  | 'Menu'
-  | 'MessageCircle'
-  | 'MessageSquare'
-  | 'Mic'
-  | 'MicOff'
-  | 'Minimize'
-  | 'Minimize2'
-  | 'Minus'
-  | 'MinusCircle'
-  | 'MinusSquare'
-  | 'Monitor'
-  | 'Moon'
-  | 'MoreHorizontal'
-  | 'MoreVertical'
-  | 'MousePointer'
-  | 'Move'
-  | 'Music'
-  | 'Navigation'
-  | 'Navigation2'
-  | 'Octagon'
-  | 'Package'
-  | 'Paperclip'
-  | 'Pause'
-  | 'PauseCircle'
-  | 'PenTool'
-  | 'Percent'
-  | 'Phone'
-  | 'PhoneCall'
-  | 'PhoneForwarded'
-  | 'PhoneIncoming'
-  | 'PhoneMissed'
-  | 'PhoneOff'
-  | 'PhoneOutgoing'
-  | 'PieChart'
-  | 'Play'
-  | 'PlayCircle'
-  | 'Plus'
-  | 'PlusCircle'
-  | 'PlusSquare'
-  | 'Pocket'
-  | 'Power'
-  | 'Printer'
-  | 'Radio'
-  | 'RefreshCcw'
-  | 'RefreshCw'
-  | 'Repeat'
-  | 'Rewind'
-  | 'RotateCcw'
-  | 'RotateCw'
-  | 'Rss'
-  | 'Save'
-  | 'Scissors'
-  | 'Search'
-  | 'Send'
-  | 'Server'
-  | 'Settings'
-  | 'Share'
-  | 'Share2'
-  | 'Shield'
-  | 'ShieldOff'
-  | 'ShoppingBag'
-  | 'ShoppingCart'
-  | 'Shuffle'
-  | 'Sidebar'
-  | 'SkipBack'
-  | 'SkipForward'
-  | 'Slack'
-  | 'Slash'
-  | 'Sliders'
-  | 'Smartphone'
-  | 'Smile'
-  | 'Speaker'
-  | 'Square'
-  | 'Star'
-  | 'StopCircle'
-  | 'Sun'
-  | 'Sunrise'
-  | 'Sunset'
-  | 'Table'
-  | 'Tablet'
-  | 'Tag'
-  | 'Target'
-  | 'Terminal'
-  | 'Thermometer'
-  | 'ThumbsDown'
-  | 'ThumbsUp'
-  | 'ToggleLeft'
-  | 'ToggleRight'
-  | 'Tool'
-  | 'Trash'
-  | 'Trash2'
-  | 'Trello'
-  | 'TrendingDown'
-  | 'TrendingUp'
-  | 'Triangle'
-  | 'Truck'
-  | 'Tv'
-  | 'Twitch'
-  | 'Twitter'
-  | 'Type'
-  | 'Umbrella'
-  | 'Underline'
-  | 'Unlock'
-  | 'Upload'
-  | 'UploadCloud'
-  | 'User'
-  | 'UserCheck'
-  | 'UserMinus'
-  | 'UserPlus'
-  | 'UserX'
-  | 'Users'
-  | 'Video'
-  | 'VideoOff'
-  | 'Voicemail'
-  | 'Volume'
-  | 'Volume1'
-  | 'Volume2'
-  | 'VolumeX'
-  | 'Watch'
-  | 'Wifi'
-  | 'WifiOff'
-  | 'Wind'
-  | 'X'
-  | 'XCircle'
-  | 'XOctagon'
-  | 'XSquare'
-  | 'Youtube'
-  | 'Zap'
-  | 'ZapOff'
-  | 'ZoomIn'
-  | 'ZoomOut';
+export type IconType = 'Activity' | 'Airplay' | 'AlertCircle' | 'AlertOctagon' | 'AlertTriangle' | 'AlignCenter' | 'AlignJustify' | 'AlignLeft' | 'AlignRight' | 'Anchor' | 'Aperture' | 'Archive' | 'ArrowDown' | 'ArrowDownCircle' | 'ArrowDownLeft' | 'ArrowDownRight' | 'ArrowLeft' | 'ArrowLeftCircle' | 'ArrowRight' | 'ArrowRightCircle' | 'ArrowUp' | 'ArrowUpCircle' | 'ArrowUpLeft' | 'ArrowUpRight' | 'AtSign' | 'Award' | 'BarChart' | 'BarChart2' | 'Battery' | 'BatteryCharging' | 'Bell' | 'BellOff' | 'Bluetooth' | 'Bold' | 'Book' | 'BookOpen' | 'Bookmark' | 'Box' | 'Briefcase' | 'Calendar' | 'Camera' | 'CameraOff' | 'Cast' | 'Check' | 'CheckCircle' | 'CheckSquare' | 'ChevronDown' | 'ChevronLeft' | 'ChevronRight' | 'ChevronUp' | 'ChevronsDown' | 'ChevronsLeft' | 'ChevronsRight' | 'ChevronsUp' | 'Chrome' | 'Circle' | 'Clipboard' | 'Clock' | 'Cloud' | 'CloudDrizzle' | 'CloudLightning' | 'CloudOff' | 'CloudRain' | 'CloudSnow' | 'Code' | 'Codepen' | 'Codesandbox' | 'Coffee' | 'Columns' | 'Command' | 'Compass' | 'Copy' | 'CornerDownLeft' | 'CornerDownRight' | 'CornerLeftDown' | 'CornerLeftUp' | 'CornerRightDown' | 'CornerRightUp' | 'CornerUpLeft' | 'CornerUpRight' | 'Cpu' | 'CreditCard' | 'Crop' | 'Crosshair' | 'Database' | 'Delete' | 'Disc' | 'Divide' | 'DivideCircle' | 'DivideSquare' | 'DollarSign' | 'Download' | 'DownloadCloud' | 'Dribbble' | 'Droplet' | 'Edit' | 'Edit2' | 'Edit3' | 'ExternalLink' | 'Eye' | 'EyeOff' | 'Facebook' | 'FastForward' | 'Feather' | 'Figma' | 'File' | 'FileMinus' | 'FilePlus' | 'FileText' | 'Film' | 'Filter' | 'Flag' | 'Folder' | 'FolderMinus' | 'FolderPlus' | 'Framer' | 'Frown' | 'Gift' | 'GitBranch' | 'GitCommit' | 'GitMerge' | 'GitPullRequest' | 'Github' | 'Github2' | 'Gitlab' | 'Globe' | 'Grid' | 'Hamburger' | 'HardDrive' | 'Hash' | 'Headphones' | 'Heart' | 'HelpCircle' | 'Hexagon' | 'Home' | 'Image' | 'Inbox' | 'Info' | 'Instagram' | 'Italic' | 'Key' | 'Layers' | 'Layout' | 'LifeBuoy' | 'Link' | 'Link2' | 'Linkedin' | 'Linkedin2' | 'List' | 'Loader' | 'Lock' | 'LogIn' | 'LogOut' | 'Mail' | 'Map' | 'MapPin' | 'Maximize' | 'Maximize2' | 'Meh' | 'Menu' | 'MessageCircle' | 'MessageSquare' | 'Mic' | 'MicOff' | 'Minimize' | 'Minimize2' | 'Minus' | 'MinusCircle' | 'MinusSquare' | 'Monitor' | 'Moon' | 'MoreHorizontal' | 'MoreVertical' | 'MousePointer' | 'Move' | 'Music' | 'Navigation' | 'Navigation2' | 'Octagon' | 'Package' | 'Paperclip' | 'Pause' | 'PauseCircle' | 'PenTool' | 'Percent' | 'Phone' | 'PhoneCall' | 'PhoneForwarded' | 'PhoneIncoming' | 'PhoneMissed' | 'PhoneOff' | 'PhoneOutgoing' | 'PieChart' | 'Play' | 'PlayCircle' | 'Plus' | 'PlusCircle' | 'PlusSquare' | 'Pocket' | 'Power' | 'Printer' | 'Radio' | 'RefreshCcw' | 'RefreshCw' | 'Repeat' | 'Rewind' | 'RotateCcw' | 'RotateCw' | 'Rss' | 'Save' | 'Scissors' | 'Search' | 'Send' | 'Server' | 'Settings' | 'Share' | 'Share2' | 'Shield' | 'ShieldOff' | 'ShoppingBag' | 'ShoppingCart' | 'Shuffle' | 'Sidebar' | 'SkipBack' | 'SkipForward' | 'Slack' | 'Slash' | 'Sliders' | 'Smartphone' | 'Smile' | 'Speaker' | 'Square' | 'Star' | 'StopCircle' | 'Sun' | 'Sunrise' | 'Sunset' | 'Table' | 'Tablet' | 'Tag' | 'Target' | 'Terminal' | 'Thermometer' | 'Threads' | 'ThumbsDown' | 'ThumbsUp' | 'ToggleLeft' | 'ToggleRight' | 'Tool' | 'Trash' | 'Trash2' | 'Trello' | 'TrendingDown' | 'TrendingUp' | 'Triangle' | 'Truck' | 'Tv' | 'Twitch' | 'Twitter' | 'Twitter2' | 'TwitterX' | 'Type' | 'Umbrella' | 'Underline' | 'Unlock' | 'Upload' | 'UploadCloud' | 'User' | 'UserCheck' | 'UserMinus' | 'UserPlus' | 'UserX' | 'Users' | 'Video' | 'VideoOff' | 'Voicemail' | 'Volume' | 'Volume1' | 'Volume2' | 'VolumeX' | 'Watch' | 'Wifi' | 'WifiOff' | 'Wind' | 'Wooz' | 'X' | 'XCircle' | 'XOctagon' | 'XSquare' | 'Youtube' | 'Zap' | 'ZapOff' | 'ZoomIn' | 'ZoomOut';
+
+
+export const IconNames = ['Activity' , 'Airplay' , 'AlertCircle' , 'AlertOctagon' , 'AlertTriangle' , 'AlignCenter' , 'AlignJustify' , 'AlignLeft' , 'AlignRight' , 'Anchor' , 'Aperture' , 'Archive' , 'ArrowDown' , 'ArrowDownCircle' , 'ArrowDownLeft' , 'ArrowDownRight' , 'ArrowLeft' , 'ArrowLeftCircle' , 'ArrowRight' , 'ArrowRightCircle' , 'ArrowUp' , 'ArrowUpCircle' , 'ArrowUpLeft' , 'ArrowUpRight' , 'AtSign' , 'Award' , 'BarChart' , 'BarChart2' , 'Battery' , 'BatteryCharging' , 'Bell' , 'BellOff' , 'Bluetooth' , 'Bold' , 'Book' , 'BookOpen' , 'Bookmark' , 'Box' , 'Briefcase' , 'Calendar' , 'Camera' , 'CameraOff' , 'Cast' , 'Check' , 'CheckCircle' , 'CheckSquare' , 'ChevronDown' , 'ChevronLeft' , 'ChevronRight' , 'ChevronUp' , 'ChevronsDown' , 'ChevronsLeft' , 'ChevronsRight' , 'ChevronsUp' , 'Chrome' , 'Circle' , 'Clipboard' , 'Clock' , 'Cloud' , 'CloudDrizzle' , 'CloudLightning' , 'CloudOff' , 'CloudRain' , 'CloudSnow' , 'Code' , 'Codepen' , 'Codesandbox' , 'Coffee' , 'Columns' , 'Command' , 'Compass' , 'Copy' , 'CornerDownLeft' , 'CornerDownRight' , 'CornerLeftDown' , 'CornerLeftUp' , 'CornerRightDown' , 'CornerRightUp' , 'CornerUpLeft' , 'CornerUpRight' , 'Cpu' , 'CreditCard' , 'Crop' , 'Crosshair' , 'Database' , 'Delete' , 'Disc' , 'Divide' , 'DivideCircle' , 'DivideSquare' , 'DollarSign' , 'Download' , 'DownloadCloud' , 'Dribbble' , 'Droplet' , 'Edit' , 'Edit2' , 'Edit3' , 'ExternalLink' , 'Eye' , 'EyeOff' , 'Facebook' , 'FastForward' , 'Feather' , 'Figma' , 'File' , 'FileMinus' , 'FilePlus' , 'FileText' , 'Film' , 'Filter' , 'Flag' , 'Folder' , 'FolderMinus' , 'FolderPlus' , 'Framer' , 'Frown' , 'Gift' , 'GitBranch' , 'GitCommit' , 'GitMerge' , 'GitPullRequest' , 'Github' , 'Github2' , 'Gitlab' , 'Globe' , 'Grid' , 'Hamburger' , 'HardDrive' , 'Hash' , 'Headphones' , 'Heart' , 'HelpCircle' , 'Hexagon' , 'Home' , 'Image' , 'Inbox' , 'Info' , 'Instagram' , 'Italic' , 'Key' , 'Layers' , 'Layout' , 'LifeBuoy' , 'Link' , 'Link2' , 'Linkedin' , 'Linkedin2' , 'List' , 'Loader' , 'Lock' , 'LogIn' , 'LogOut' , 'Mail' , 'Map' , 'MapPin' , 'Maximize' , 'Maximize2' , 'Meh' , 'Menu' , 'MessageCircle' , 'MessageSquare' , 'Mic' , 'MicOff' , 'Minimize' , 'Minimize2' , 'Minus' , 'MinusCircle' , 'MinusSquare' , 'Monitor' , 'Moon' , 'MoreHorizontal' , 'MoreVertical' , 'MousePointer' , 'Move' , 'Music' , 'Navigation' , 'Navigation2' , 'Octagon' , 'Package' , 'Paperclip' , 'Pause' , 'PauseCircle' , 'PenTool' , 'Percent' , 'Phone' , 'PhoneCall' , 'PhoneForwarded' , 'PhoneIncoming' , 'PhoneMissed' , 'PhoneOff' , 'PhoneOutgoing' , 'PieChart' , 'Play' , 'PlayCircle' , 'Plus' , 'PlusCircle' , 'PlusSquare' , 'Pocket' , 'Power' , 'Printer' , 'Radio' , 'RefreshCcw' , 'RefreshCw' , 'Repeat' , 'Rewind' , 'RotateCcw' , 'RotateCw' , 'Rss' , 'Save' , 'Scissors' , 'Search' , 'Send' , 'Server' , 'Settings' , 'Share' , 'Share2' , 'Shield' , 'ShieldOff' , 'ShoppingBag' , 'ShoppingCart' , 'Shuffle' , 'Sidebar' , 'SkipBack' , 'SkipForward' , 'Slack' , 'Slash' , 'Sliders' , 'Smartphone' , 'Smile' , 'Speaker' , 'Square' , 'Star' , 'StopCircle' , 'Sun' , 'Sunrise' , 'Sunset' , 'Table' , 'Tablet' , 'Tag' , 'Target' , 'Terminal' , 'Thermometer' , 'Threads' , 'ThumbsDown' , 'ThumbsUp' , 'ToggleLeft' , 'ToggleRight' , 'Tool' , 'Trash' , 'Trash2' , 'Trello' , 'TrendingDown' , 'TrendingUp' , 'Triangle' , 'Truck' , 'Tv' , 'Twitch' , 'Twitter' , 'Twitter2' , 'TwitterX' , 'Type' , 'Umbrella' , 'Underline' , 'Unlock' , 'Upload' , 'UploadCloud' , 'User' , 'UserCheck' , 'UserMinus' , 'UserPlus' , 'UserX' , 'Users' , 'Video' , 'VideoOff' , 'Voicemail' , 'Volume' , 'Volume1' , 'Volume2' , 'VolumeX' , 'Watch' , 'Wifi' , 'WifiOff' , 'Wind' , 'Wooz' , 'X' , 'XCircle' , 'XOctagon' , 'XSquare' , 'Youtube' , 'Zap' , 'ZapOff' , 'ZoomIn' , 'ZoomOut'];
+
+
 
 type Images = {
   [key in IconType]: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
 };
 
+
 export const images: Images = {
-  Activity,
-  Airplay,
-  AlertCircle,
-  AlertOctagon,
-  AlertTriangle,
-  AlignCenter,
-  AlignJustify,
-  AlignLeft,
-  AlignRight,
-  Anchor,
-  Aperture,
-  Archive,
-  ArrowDown,
-  ArrowDownCircle,
-  ArrowDownLeft,
-  ArrowDownRight,
-  ArrowLeft,
-  ArrowLeftCircle,
-  ArrowRight,
-  ArrowRightCircle,
-  ArrowUp,
-  ArrowUpCircle,
-  ArrowUpLeft,
-  ArrowUpRight,
-  AtSign,
-  Award,
-  BarChart,
-  BarChart2,
-  Battery,
-  BatteryCharging,
-  Bell,
-  BellOff,
-  Bluetooth,
-  Bold,
-  Book,
-  BookOpen,
-  Bookmark,
-  Box,
-  Briefcase,
-  Calendar,
-  Camera,
-  CameraOff,
-  Cast,
-  Check,
-  CheckCircle,
-  CheckSquare,
-  ChevronDown,
-  ChevronLeft,
-  ChevronRight,
-  ChevronUp,
-  ChevronsDown,
-  ChevronsLeft,
-  ChevronsRight,
-  ChevronsUp,
-  Chrome,
-  Circle,
-  Clipboard,
-  Clock,
-  Cloud,
-  CloudDrizzle,
-  CloudLightning,
-  CloudOff,
-  CloudRain,
-  CloudSnow,
-  Code,
-  Codepen,
-  Codesandbox,
-  Coffee,
-  Columns,
-  Command,
-  Compass,
-  Copy,
-  CornerDownLeft,
-  CornerDownRight,
-  CornerLeftDown,
-  CornerLeftUp,
-  CornerRightDown,
-  CornerRightUp,
-  CornerUpLeft,
-  CornerUpRight,
-  Cpu,
-  CreditCard,
-  Crop,
-  Crosshair,
-  Database,
-  Delete,
-  Disc,
-  Divide,
-  DivideCircle,
-  DivideSquare,
-  DollarSign,
-  Download,
-  DownloadCloud,
-  Dribbble,
-  Droplet,
-  Edit,
-  Edit2,
-  Edit3,
-  ExternalLink,
-  Eye,
-  EyeOff,
-  Facebook,
-  FastForward,
-  Feather,
-  Figma,
-  File,
-  FileMinus,
-  FilePlus,
-  FileText,
-  Film,
-  Filter,
-  Flag,
-  Folder,
-  FolderMinus,
-  FolderPlus,
-  Framer,
-  Frown,
-  Gift,
-  GitBranch,
-  GitCommit,
-  GitMerge,
-  GitPullRequest,
-  Github,
-  Gitlab,
-  Globe,
-  Grid,
-  HardDrive,
-  Hash,
-  Headphones,
-  Heart,
-  HelpCircle,
-  Hexagon,
-  Home,
-  Image,
-  Inbox,
-  Info,
-  Instagram,
-  Italic,
-  Key,
-  Layers,
-  Layout,
-  LifeBuoy,
-  Link,
-  Link2,
-  Linkedin,
-  List,
-  Loader,
-  Lock,
-  LogIn,
-  LogOut,
-  Mail,
-  Map,
-  MapPin,
-  Maximize,
-  Maximize2,
-  Meh,
-  Menu,
-  MessageCircle,
-  MessageSquare,
-  Mic,
-  MicOff,
-  Minimize,
-  Minimize2,
-  Minus,
-  MinusCircle,
-  MinusSquare,
-  Monitor,
-  Moon,
-  MoreHorizontal,
-  MoreVertical,
-  MousePointer,
-  Move,
-  Music,
-  Navigation,
-  Navigation2,
-  Octagon,
-  Package,
-  Paperclip,
-  Pause,
-  PauseCircle,
-  PenTool,
-  Percent,
-  Phone,
-  PhoneCall,
-  PhoneForwarded,
-  PhoneIncoming,
-  PhoneMissed,
-  PhoneOff,
-  PhoneOutgoing,
-  PieChart,
-  Play,
-  PlayCircle,
-  Plus,
-  PlusCircle,
-  PlusSquare,
-  Pocket,
-  Power,
-  Printer,
-  Radio,
-  RefreshCcw,
-  RefreshCw,
-  Repeat,
-  Rewind,
-  RotateCcw,
-  RotateCw,
-  Rss,
-  Save,
-  Scissors,
-  Search,
-  Send,
-  Server,
-  Settings,
-  Share,
-  Share2,
-  Shield,
-  ShieldOff,
-  ShoppingBag,
-  ShoppingCart,
-  Shuffle,
-  Sidebar,
-  SkipBack,
-  SkipForward,
-  Slack,
-  Slash,
-  Sliders,
-  Smartphone,
-  Smile,
-  Speaker,
-  Square,
-  Star,
-  StopCircle,
-  Sun,
-  Sunrise,
-  Sunset,
-  Table,
-  Tablet,
-  Tag,
-  Target,
-  Terminal,
-  Thermometer,
-  ThumbsDown,
-  ThumbsUp,
-  ToggleLeft,
-  ToggleRight,
-  Tool,
-  Trash,
-  Trash2,
-  Trello,
-  TrendingDown,
-  TrendingUp,
-  Triangle,
-  Truck,
-  Tv,
-  Twitch,
-  Twitter,
-  Type,
-  Umbrella,
-  Underline,
-  Unlock,
-  Upload,
-  UploadCloud,
-  User,
-  UserCheck,
-  UserMinus,
-  UserPlus,
-  UserX,
-  Users,
-  Video,
-  VideoOff,
-  Voicemail,
-  Volume,
-  Volume1,
-  Volume2,
-  VolumeX,
-  Watch,
-  Wifi,
-  WifiOff,
-  Wind,
-  X,
-  XCircle,
-  XOctagon,
-  XSquare,
-  Youtube,
-  Zap,
-  ZapOff,
-  ZoomIn,
-  ZoomOut,
+    Activity,
+    Airplay,
+    AlertCircle,
+    AlertOctagon,
+    AlertTriangle,
+    AlignCenter,
+    AlignJustify,
+    AlignLeft,
+    AlignRight,
+    Anchor,
+    Aperture,
+    Archive,
+    ArrowDown,
+    ArrowDownCircle,
+    ArrowDownLeft,
+    ArrowDownRight,
+    ArrowLeft,
+    ArrowLeftCircle,
+    ArrowRight,
+    ArrowRightCircle,
+    ArrowUp,
+    ArrowUpCircle,
+    ArrowUpLeft,
+    ArrowUpRight,
+    AtSign,
+    Award,
+    BarChart,
+    BarChart2,
+    Battery,
+    BatteryCharging,
+    Bell,
+    BellOff,
+    Bluetooth,
+    Bold,
+    Book,
+    BookOpen,
+    Bookmark,
+    Box,
+    Briefcase,
+    Calendar,
+    Camera,
+    CameraOff,
+    Cast,
+    Check,
+    CheckCircle,
+    CheckSquare,
+    ChevronDown,
+    ChevronLeft,
+    ChevronRight,
+    ChevronUp,
+    ChevronsDown,
+    ChevronsLeft,
+    ChevronsRight,
+    ChevronsUp,
+    Chrome,
+    Circle,
+    Clipboard,
+    Clock,
+    Cloud,
+    CloudDrizzle,
+    CloudLightning,
+    CloudOff,
+    CloudRain,
+    CloudSnow,
+    Code,
+    Codepen,
+    Codesandbox,
+    Coffee,
+    Columns,
+    Command,
+    Compass,
+    Copy,
+    CornerDownLeft,
+    CornerDownRight,
+    CornerLeftDown,
+    CornerLeftUp,
+    CornerRightDown,
+    CornerRightUp,
+    CornerUpLeft,
+    CornerUpRight,
+    Cpu,
+    CreditCard,
+    Crop,
+    Crosshair,
+    Database,
+    Delete,
+    Disc,
+    Divide,
+    DivideCircle,
+    DivideSquare,
+    DollarSign,
+    Download,
+    DownloadCloud,
+    Dribbble,
+    Droplet,
+    Edit,
+    Edit2,
+    Edit3,
+    ExternalLink,
+    Eye,
+    EyeOff,
+    Facebook,
+    FastForward,
+    Feather,
+    Figma,
+    File,
+    FileMinus,
+    FilePlus,
+    FileText,
+    Film,
+    Filter,
+    Flag,
+    Folder,
+    FolderMinus,
+    FolderPlus,
+    Framer,
+    Frown,
+    Gift,
+    GitBranch,
+    GitCommit,
+    GitMerge,
+    GitPullRequest,
+    Github,
+    Github2,
+    Gitlab,
+    Globe,
+    Grid,
+    Hamburger,
+    HardDrive,
+    Hash,
+    Headphones,
+    Heart,
+    HelpCircle,
+    Hexagon,
+    Home,
+    Image,
+    Inbox,
+    Info,
+    Instagram,
+    Italic,
+    Key,
+    Layers,
+    Layout,
+    LifeBuoy,
+    Link,
+    Link2,
+    Linkedin,
+    Linkedin2,
+    List,
+    Loader,
+    Lock,
+    LogIn,
+    LogOut,
+    Mail,
+    Map,
+    MapPin,
+    Maximize,
+    Maximize2,
+    Meh,
+    Menu,
+    MessageCircle,
+    MessageSquare,
+    Mic,
+    MicOff,
+    Minimize,
+    Minimize2,
+    Minus,
+    MinusCircle,
+    MinusSquare,
+    Monitor,
+    Moon,
+    MoreHorizontal,
+    MoreVertical,
+    MousePointer,
+    Move,
+    Music,
+    Navigation,
+    Navigation2,
+    Octagon,
+    Package,
+    Paperclip,
+    Pause,
+    PauseCircle,
+    PenTool,
+    Percent,
+    Phone,
+    PhoneCall,
+    PhoneForwarded,
+    PhoneIncoming,
+    PhoneMissed,
+    PhoneOff,
+    PhoneOutgoing,
+    PieChart,
+    Play,
+    PlayCircle,
+    Plus,
+    PlusCircle,
+    PlusSquare,
+    Pocket,
+    Power,
+    Printer,
+    Radio,
+    RefreshCcw,
+    RefreshCw,
+    Repeat,
+    Rewind,
+    RotateCcw,
+    RotateCw,
+    Rss,
+    Save,
+    Scissors,
+    Search,
+    Send,
+    Server,
+    Settings,
+    Share,
+    Share2,
+    Shield,
+    ShieldOff,
+    ShoppingBag,
+    ShoppingCart,
+    Shuffle,
+    Sidebar,
+    SkipBack,
+    SkipForward,
+    Slack,
+    Slash,
+    Sliders,
+    Smartphone,
+    Smile,
+    Speaker,
+    Square,
+    Star,
+    StopCircle,
+    Sun,
+    Sunrise,
+    Sunset,
+    Table,
+    Tablet,
+    Tag,
+    Target,
+    Terminal,
+    Thermometer,
+    Threads,
+    ThumbsDown,
+    ThumbsUp,
+    ToggleLeft,
+    ToggleRight,
+    Tool,
+    Trash,
+    Trash2,
+    Trello,
+    TrendingDown,
+    TrendingUp,
+    Triangle,
+    Truck,
+    Tv,
+    Twitch,
+    Twitter,
+    Twitter2,
+    TwitterX,
+    Type,
+    Umbrella,
+    Underline,
+    Unlock,
+    Upload,
+    UploadCloud,
+    User,
+    UserCheck,
+    UserMinus,
+    UserPlus,
+    UserX,
+    Users,
+    Video,
+    VideoOff,
+    Voicemail,
+    Volume,
+    Volume1,
+    Volume2,
+    VolumeX,
+    Watch,
+    Wifi,
+    WifiOff,
+    Wind,
+    Wooz,
+    X,
+    XCircle,
+    XOctagon,
+    XSquare,
+    Youtube,
+    Zap,
+    ZapOff,
+    ZoomIn,
+    ZoomOut,
 };

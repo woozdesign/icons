@@ -25,7 +25,10 @@ const react = `import { FunctionComponent, SVGProps } from 'react';\n`;
 const imports = allIconNames.map((name, index) => `import ${name} from './${allSvgFiles[index]}';`).join('\n');
 
 // Generate IconType
-const iconType = `export type IconType = '${allIconNames.join("' | '")}';`;
+const iconType = `export type IconType = '${allIconNames.join("' | '")}';\n`;
+
+// Generate IconType
+const iconNames = `export const IconNames = ['${allIconNames.join("' , '")}'];\n`;
 
 // Generate Images type
 const imagesType = `
@@ -40,7 +43,7 @@ export const images: Images = {
 };`;
 
 // Combine everything into one string
-const content = [react, imports, iconType, imagesType, imagesMapping].join('\n\n');
+const content = [react, imports, iconType, iconNames, imagesType, imagesMapping].join('\n\n');
 
 // Write to SvgPath.ts
 fs.writeFileSync(path.join(__dirname, '../src/SvgPath.ts'), content);
