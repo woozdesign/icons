@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const sourceDirectory = 'src/svg/feather_original/';
-const destinationDirectory = 'src/svg/feather';
+const destinationDirectory = 'src/svg/';
 
 // Convert name from 'alert-circle' to 'AlertCircle'
 const convertToPascalCase = (str) => {

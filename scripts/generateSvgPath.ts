@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const svgDirectories = [path.join(__dirname, '../src/svg/feather')];
+const svgDirectories = [path.join(__dirname, '../src/svg/')];
 
 let allSvgFiles = [];
 let allIconNames = [];
@@ -22,7 +22,7 @@ svgDirectories.forEach((svgDirectory) => {
 const react = `import { FunctionComponent, SVGProps } from 'react';\n`;
 
 // Generate imports
-const imports = allIconNames.map((name, index) => `import ${name} from './svg/${allSvgFiles[index]}';`).join('\n');
+const imports = allIconNames.map((name, index) => `import ${name} from './${allSvgFiles[index]}';`).join('\n');
 
 // Generate IconType
 const iconType = `export type IconType = '${allIconNames.join("' | '")}';`;
