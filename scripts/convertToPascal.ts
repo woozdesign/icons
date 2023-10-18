@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const sourceDirectory = 'src/svg/feather/';
+const sourceDirectory = 'src/svg/wooz/';
 const destinationDirectory = 'src/svg/';
 
 // Convert name from 'alert-circle' to 'AlertCircle'
