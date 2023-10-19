@@ -23,6 +23,7 @@
   "dependencies": {
     "@types/react": "^18.2.25",
     "@woozdesign/colors": "^1.0.31",
+    "classnames": "^2.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sass": "^1.67.0"

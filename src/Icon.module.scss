@@ -25,6 +25,9 @@
   &--accent {
     color: var(--color-accent-9);
   }
+  &.highContrast {
+    color: var(--color-accent-12);
+  }
 }
 
 .wrapper {

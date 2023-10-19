@@ -40,4 +40,5 @@ export interface IconProps {
   className?: string;
   style?: React.CSSProperties;
   color?: ThemeAccentColor;
+  highContrast?: boolean;
 }
