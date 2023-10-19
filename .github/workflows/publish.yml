@@ -16,7 +16,7 @@ jobs:
           scope: '@woozlabs'
 
       - name: Install dependencies 🔧
-        run: npm ci
+        run: yarn install --frozen-lockfile
 
       - name: Publish package on NPM 📦
         run: npm publish --access public
