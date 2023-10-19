@@ -1,20 +1,13 @@
+import classNames from 'classnames';
 import React, { FC } from 'react';
 import styles from './Icon.module.scss';
 import { IconProps } from './Icon.prop';
 import { images } from './SvgPath';
-const Icon: FC<IconProps> = ({ type, color, size = 'medium', className, style }) => {
+const Icon: FC<IconProps> = ({ type, color, size = 'medium', className, style, highContrast }) => {
   const SvgIcon = images[type];
-  // const wrapperClass = `${styles[`wrapper--${size}`]} `;
-  const iconClasses = [styles.icon, styles[`icon--${size}`], color ? styles[`icon--accent`] : '', className ?? ''];
+  const iconClasses = classNames(styles.icon, styles[`icon--${size}`], className, { [styles[`icon--accent`]]: color, [styles[`highContrast`]]: highContrast });
 
-  return (
-    // <span className={wrapperClass}>
-    <SvgIcon data-accent-color={color} className={combineClassNames(iconClasses)} style={style} />
-    // </span>
-  );
+  return <SvgIcon data-accent-color={color} className={iconClasses} style={style} />;
 };
 
 export default Icon;
-export const combineClassNames = (arr: Array<string>) => {
-  return arr.filter(Boolean).join(' ');
-};
