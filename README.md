@@ -1,4 +1,4 @@
-![header](https://capsule-render.vercel.app/api?type=rect&color=000&fontColor=fff&height=148&section=header&text=Wooz%20Design%20Icons&fontSize=52)
+[![WoozDesign Icons](Icons.png)](https://woozdesign.com/docs/icons)
 
 24x24 icons crafted by the WoozDesign team.
 
